@@ -5,11 +5,28 @@ CREATE DATABASE apartments_dev;
 
 CREATE TABLE apartments (
     id SERIAL PRIMARY KEY,
-    typeOfPlace TEXT NOT NULL,
+    typeof_place TEXT NOT NULL,
+    image TEXT,
     price NUMERIC,
-    location TEXT,
-    phoneNumber NUMERIC,
+    location TEXT NOT NULL,
+    phone_number NUMERIC,
     amenities TEXT,
-    children_Allow BOOLEAN,
-    pets_Allow BOOLEAN
+    children_allow BOOLEAN,
+    pets_allow BOOLEAN
 );
+
+DROP TABLE IF EXISTS appointments;
+
+CREATE TABLE appointments (
+    id SERIAL PRIMARY KEY,
+    full_name TEXT,
+    phone_number NUMERIC,
+    email TEXT,
+    appointment_date TEXT,
+    appointment_time TEXT,
+    apartment_id INTEGER REFERENCES apartments (id)
+    ON DELETE CASCADE
+);
+
+
+
