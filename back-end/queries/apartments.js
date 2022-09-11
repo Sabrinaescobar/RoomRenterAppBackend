@@ -32,7 +32,7 @@ const getAllApartments = async () => {
           phone_number,
           amenities,
           children_allow,
-          pets_allow,
+          pets_allow
         ]
       );
       return newApartment;
