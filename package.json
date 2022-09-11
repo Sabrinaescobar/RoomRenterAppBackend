@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "axios": "^0.27.2"
-  }
+  },
+  "name": "roomrenterapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "cd back-end && npm i && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sabrinaescobar/RoomRenterAppBackend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sabrinaescobar/RoomRenterAppBackend/issues"
+  },
+  "homepage": "https://github.com/Sabrinaescobar/RoomRenterAppBackend#readme",
+  "description": ""
 }
