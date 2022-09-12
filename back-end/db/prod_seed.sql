@@ -1,4 +1,3 @@
-
 INSERT INTO apartments (typeof_place, image, price, location, phone_number, amenities, children_allow, pets_allow) VALUES
 ('Room','https://acehotel.com/new-york/wp-content/uploads/sites/9/2021/06/NYC-1096x722.jpg', 1000, '343 E 118st New York,NY 10035', 3474322110, 'Internet, Gym in the building and laundry', true, false),
 ('Apartment','https://images1.apartments.com/i2/8t5pitCqc_akYi1v0sgsGGWPex7l6cgw0Frlk7xhcmE/117/the-ritz-plaza-new-york-ny-building-photo.jpg', 2500, '472 W 115th st New York, NY 10029', 2494322918, 'Backyard, Laudry, Gym', true, true),
