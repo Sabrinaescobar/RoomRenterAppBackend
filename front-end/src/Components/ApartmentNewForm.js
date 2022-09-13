@@ -39,7 +39,7 @@ function ApartmentNewForm() {
   };
 
   const handleSelectChange = (event) => {
-    setApartment({ ...apartment, [event.target.id]: event.target.value });
+    setApartment({ ...apartment, [event.target.id]: event.target.value }); 
   };
 
   const handleCheckboxChange = () => {
@@ -52,14 +52,22 @@ function ApartmentNewForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addApartment(apartment);
+    if (apartment.typeof_place === ""){
+      alert("Please select the type of place that you are renting")
+    } else{
+    addApartment(apartment)
+    }
   };
   return (
     <div className="mb-3">
       <form onSubmit={handleSubmit}>
-        <label className="form-label" htmlFor="typeof_place">Type of Place:</label>
+        <label className="form-label" htmlFor="typeof_place">Select Type of Place:</label>
         <select id="typeof_place" onChange={handleSelectChange}>
-          <option value="Apartment">Apartment</option>
+          <option value=""></option>
+          <option value="1 bedroom apartment">1 bedroom apartment</option>
+          <option value="2 bedroom apartment">2 bedroom apartment</option>
+          <option value="3 bedroom apartment">3 bedroom apartment</option>
+          <option value="4 bedroom apartment">4 bedroom Apartment</option>
           <option value="Studio">Studio</option>
           <option value="Room">Room</option>
         </select>

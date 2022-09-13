@@ -61,7 +61,11 @@ function ApartmentEditForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (apartment.typeof_place === ""){
+      alert("Please select the type of place that you are renting")
+    } else {
     updateApartment(apartment, id);
+    }
   };
   return (
     <div className="Edit">
@@ -73,7 +77,11 @@ function ApartmentEditForm() {
         value={apartment.typeof_place} 
         onChange={handleSelectChange}
         >
-          <option value="Apartment">Apartment</option>
+          <option value=""></option>
+          <option value="1 bedroom apartment">1 bedroom apartment</option>
+          <option value="2 bedroom apartment">2 bedroom apartment</option>
+          <option value="3 bedroom apartment">3 bedroom apartment</option>
+          <option value="4 bedroom apartment">4 bedroom Apartment</option>
           <option value="Studio">Studio</option>
           <option value="Room">Room</option>
         </select>

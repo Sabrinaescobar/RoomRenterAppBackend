@@ -7,7 +7,7 @@ import moment from 'moment';
 function AppointmentForm( props ) {
   let { id } = useParams();
   const { appointmentDetails } = props;
-  const [dateState, setDateState] = useState(new Date())
+  const [dateState] = useState(new Date())
   const [appointment, setAppointment] = useState({
     full_name: "",
     phone_number:"",
